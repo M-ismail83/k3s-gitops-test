@@ -21,7 +21,10 @@ spec:
         - containerPort: 80
         env:
           - name: ConnectionStrings__DefaultConnection
-            value: ${POSTGRES_CONNECTION}
+            valueFrom:
+              secretKeyRef:
+                name: db-secret
+                key: postgres-connection
         resources:
           requests:
             memory: "256Mi"
