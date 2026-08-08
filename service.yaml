@@ -6,7 +6,7 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app: live-api
+    app: auth-api
   ports:
     - port: 80
       targetPort: 80
