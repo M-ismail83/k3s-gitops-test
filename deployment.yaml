@@ -20,7 +20,7 @@ spec:
         ports:
         - containerPort: 80
         env:
-          - name: ConnectionStrings__POSTGRES_CONNECTION
+          - name: POSTGRES_CONNECTION
             valueFrom:
               secretKeyRef:
                 name: db-secret
