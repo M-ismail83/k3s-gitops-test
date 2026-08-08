@@ -25,6 +25,8 @@ spec:
               secretKeyRef:
                 name: db-secret
                 key: postgres-connection
+          - name: REDIS_CONNECTION
+            value: "redis:6379"
         resources:
           requests:
             memory: "256Mi"
